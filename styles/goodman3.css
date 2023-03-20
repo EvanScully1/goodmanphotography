@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 120px;
+    z-index: 1300;
+    -webkit-transition: all ease-out .25s;
+    -moz-transition: all ease-out .25s;
+    -o-transition: all ease-out .25s;
+    transition: all ease-out .25s;
+}
+
+
+header #logo_img {
+    position: relative;
+    transition: 0.6s;
+    max-width:  150px;
+    min-width: 50px;
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/Goodman/photos/Background1.jpg);
+    /* background: url(/Goodman/photos/IMG_1205.JPG); */
+    background-size: cover;
+    text-align: center;
+}
+
+.banner p {
+    font-weight: bold;
+    font-size: 700%;
+    color: rgb(255, 255, 255, 0.45);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 
+------------------------------------------------
+                MEDIA Tags
+------------------------------------------------
+*/
+@media only screen and (min-width: 100px) {
+	header, header ul{
+		display: column;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	header, header ul{
+		display: flex;
+	}
+}
+
+/* 
+------------------------------------------------
+                NAV (HEADER) Tags
+------------------------------------------------
+*/
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header ul li a:hover {
+    color: red;
+}
+
+header ul li a img {
+    width: 40px;
+}
+header ul ul {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+header ul ul li a {
+    text-align: left;
+}
+
+header ul li:hover > ul {
+    display: block;
+}
+
+.active {
+    background-color: white;
+    color: black;
+}
+/* 
+------------------------------------------------
+                Section 2 Tags
+------------------------------------------------
+*/
+#pg2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    padding: 2em;
+    grid-gap: 1em;
+    margin: 2em 1em;
+    text-decoration: none;
+
+}
+
+#pg2 > div {
+    background-color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(0, 0, 0, 0.45);
+    padding: 3em;
+    border-radius: 15px;
+}
+
+#pg2 #img9 {
+    background-image: url(/Goodman/photos/img9.JPG);
+
+}
+footer {
+    margin-top: auto;
+    padding: 1.5em;
+    font-size: 85%;
+    background-color: rgba(213, 1, 1, 0.929);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    opacity: 70%;
+    font-size: 18px;
+}
+
+#es {
+    opacity: 50%;
+}
