@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Goodman Photography Webpage</title>
+		<meta charset="utf-8">
+        <link rel="shortcut icon" href="../Goodman/photos/favicon.ico">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Poppins');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    min-height: 200vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    -webkit-transition: all ease-out .25s;
+    -moz-transition: all ease-out .25s;
+    -o-transition: all ease-out .25s;
+    transition: all ease-out .25s;
+}
+
+
+header #logo_img {
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    max-width:  150px;
+    min-width: 50px;
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/Goodman/photos/Background1.jpg);
+    /* background: url(/Goodman/photos/IMG_1205.JPG); */
+    background-size: cover;
+}
+
+/* 
+------------------------------------------------
+                MEDIA Tags
+------------------------------------------------
+*/
+@media only screen and (min-width: 100px) {
+	header, header ul{
+		display: column;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	header, header ul{
+		display: flex;
+	}
+}
+
+/* 
+------------------------------------------------
+                NAV (HEADER) Tags
+------------------------------------------------
+*/
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header ul li a:hover {
+    color: red;
+}
+
+header ul li a img {
+    width: 40px;
+}
+header ul ul {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+header ul ul li a {
+    text-align: left;
+}
+
+header ul li:hover > ul {
+    display: block;
+}
+
+.active {
+    background-color: white;
+    color: black;
+}
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <a href="index.html"><img src="../Goodman/photos/logophoto.png" alt="Goodman Photography" id="logo_img"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/Goodman/about.html">About</a></li>
+                <li><a href="#">Galleries</a>
+                    <ul>
+                        <li><a href="/Goodman/Galleries/Aerials.html">Aerials&#8702;</a></li>
+                        <li><a href="/Goodman/Galleries/Ground.html">Ground&#8702;</a></li>
+                        <li><a href="/Goodman/Galleries/Portraits.html">Portraits&#8702;</a></li>
+                        <li><a href="/Goodman/Galleries/Products.html">Products&#8702;</a></li>
+                        <li><a href="/Goodman/Galleries/Sports.html">Sports&#8702;</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="/Goodman/Services/Aerials.html">Aerial&#8702;</a></li>
+                        <li><a href="/Goodman/Services/Ground.html">Ground&#8702;</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Goodman/contact.html">Contact</a></li>
+                <li><a href="https://instagram.com/jakegoodmanphoto?igshid=YmMyMTA2M2Y=" target="_blank"><img src="/Goodman/photos/ig.PNG" alt="IG"></a></li>
+            </ul>
+        </header>
+        <section class="banner"></section>
+        
+        <section>
+            <div class="left_div"><a href="/Goodman/Galleries/Sports.html">Sports</a></div>
+            <div class="right_div"><a href="/Goodman/Galleries/Portraits.html">Portraits</a></div>
+            <div class="left_div"><a href="/Goodman/Galleries/Aerials.html">Aerials</a></div>
+            <div class="right_div"><a href="/Goodman/Galleries/Ground.html">Other</a></div>
+        </section>
+        
+        <script>
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("header").style.backgroundColor = "rgb(0, 0, 0)";
+                    // document.getElementById("header").style.color = "rgb(0, 0, 0)";
+                    document.getElementById("header").style.fontSize = "smaller";
+                } else {
+                    document.getElementById("header").style.backgroundColor = "rgb(0, 0, 0, 0)";
+                    // document.getElementById("header").style.color = "rgb(255, 255, 255)";
+                    document.getElementById("header").style.fontSize = "larger";
+                }
+            }
+        </script>
+    </body>
+</html>
