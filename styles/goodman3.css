@@ -43,7 +43,7 @@ header #logo_img {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url(../goodmanphotography/photos/Background1.jpg);
+    background: url("../goodmanphotography/photos/Background1.jpg");
     /* background: url(/Goodman/photos/IMG_1205.JPG); */
     background-size: cover;
     text-align: center;
@@ -156,7 +156,7 @@ header ul li:hover > ul {
 }
 
 #pg2 #img9 {
-    background-image: url(../goodmanphotography/photos/img9.JPG);
+    background-image: url("../goodmanphotography/photos/img9.JPG");
 
 }
 footer {
